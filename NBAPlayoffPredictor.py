@@ -10,7 +10,7 @@ from utils.MLUtils import *
 
 
 def main():
-    X, y = get_input_output_split('./Team Stats Per Game.csv')
+    X, y = get_input_output_split('./Team_Stats_Per_Game.csv')
 
     model_list = [
         DecisionTreeClassifier(),
