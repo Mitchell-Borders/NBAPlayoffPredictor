@@ -1,3 +1,4 @@
+season,lg,team,abbreviation,playoffs,g,mp_per_game,fg_per_game,fga_per_game,fg_percent,x3p_per_game,x3pa_per_game,x3p_percent,x2p_per_game,x2pa_per_game,x2p_percent,ft_per_game,fta_per_game,ft_percent,orb_per_game,drb_per_game,trb_per_game,ast_per_game,stl_per_game,blk_per_game,tov_per_game,pf_per_game,pts_per_game
 2021,NBA,Atlanta Hawks,ATL,TRUE,72,241.7,40.8,87.2,0.468,12.4,33.4,0.373,28.4,53.9,0.526,19.7,24.2,0.812,10.6,35.1,45.6,24.1,7,4.8,13.2,19.3,113.7
 2021,NBA,Boston Celtics,BOS,TRUE,72,241.4,41.5,88.9,0.466,13.6,36.4,0.374,27.9,52.5,0.53,16.1,20.8,0.775,10.6,33.6,44.3,23.5,7.7,5.3,14.1,20.4,112.6
 2021,NBA,Brooklyn Nets,BRK,TRUE,72,241.7,43.1,87.3,0.494,14.2,36.1,0.392,29,51.2,0.565,18.1,22.5,0.804,8.9,35.5,44.4,26.8,6.7,5.3,13.5,19,118.6
