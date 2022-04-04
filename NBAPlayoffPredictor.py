@@ -36,10 +36,10 @@ def main():
 
         actual_y = []
         predicted_y = []
-        y_probas = []
-        # implement 10-fold cross-validation
+        # implement 5-fold cross-validation
         fold_no = 1
         skf = sklearn.model_selection.StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
         for train_index, test_index in skf.split(X, y):
             train_x = X[train_index]
             train_y = y[train_index]
@@ -49,9 +49,6 @@ def main():
             model.fit(train_x, train_y)
 
             pred = model.predict(test_x)
-
-            y_probability = model.predict_proba(test_x)
-            y_probas.append(y_probability)
 
             # put values of this fold into the array
             actual_y.append(test_y)
@@ -68,17 +65,17 @@ def main():
         # calculate data for overall model
         actual_y = np.concatenate(actual_y)
         predicted_y = np.concatenate(predicted_y)
-        y_probas = np.concatenate(y_probas)
-        # predicted_y = np.argmax(predicted_y, axis = 1)
 
         overall_accuracy_score = sklearn.metrics.accuracy_score(actual_y, predicted_y)
         print('\nOverall score (accuracy):', overall_accuracy_score)
 
         print(sklearn.metrics.classification_report(actual_y, predicted_y, zero_division=0, digits=5))
-        # plot confusion matrics
+
+        # plot confusion matrix
         matrix = sklearn.metrics.confusion_matrix(actual_y, predicted_y)
         cmPlot = sklearn.metrics.ConfusionMatrixDisplay(matrix)
         cmPlot.plot(cmap='YlGn')
+        plt.title(current_model[i])
         plt.show()
 
 
